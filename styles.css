@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background-color: #ecf2f8;
+}
+
+.display {
+  display: block !important;
+}
+
+.background {
+  background-color: #48556a !important;
+}
+.background img {
+  filter: brightness(600);
+}
+
+main {
+  background-color: white;
+  display: grid;
+  grid-template-areas: "img text";
+  margin: 23rem auto;
+  width: 55%;
+  min-width: 90rem;
+  border-radius: 1rem;
+  box-shadow: 9.91px 9.91px 15px #D9DADE, -9.91px -9.91px 15px #FFFFFF;
+}
+main .container-left {
+  grid-area: img;
+  width: 40rem;
+}
+main .container-left img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem 0 0rem 1rem;
+}
+main .container-right {
+  grid-area: text;
+  margin: 4rem;
+}
+main .container-right h1 {
+  font-size: 2.5rem;
+}
+main .container-right p {
+  margin-top: 2rem;
+  color: #48556a;
+  font-size: 1.5rem;
+}
+main .container-right .contain-footer {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+  width: 100%;
+}
+main .container-right .contain-footer .contain-img {
+  display: flex;
+}
+main .container-right .contain-footer .contain-img .contain-img-profile {
+  width: 5rem;
+}
+main .container-right .contain-footer .contain-img .contain-img-profile img {
+  border-radius: 50%;
+  width: 100%;
+}
+main .container-right .contain-footer .contain-img h2 {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+main .container-right .contain-footer .contain-img h2 span {
+  font-weight: 200;
+  color: #48556a;
+}
+main .container-right .contain-footer .contain-img-share {
+  cursor: pointer;
+  background-color: #ecf2f8;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  padding: 1rem;
+}
+main .container-right .contain-footer .contain-img-share img {
+  width: 100%;
+}
+main .container-right .contain-footer .contain-img-share img::selection {
+  background-color: transparent;
+}
+main .container-right .contain-footer .contain-img-share .state {
+  display: none;
+  position: absolute;
+  margin: -13.5rem 0 0 -15rem;
+  width: 30rem;
+  height: 7rem;
+  background-color: #48556a;
+  border-radius: 1rem;
+}
+main .container-right .contain-footer .contain-img-share .state::before {
+  transform: rotate(90deg);
+  position: absolute;
+  content: "";
+  margin: 5.7rem 0 0 15rem;
+  width: 0;
+  height: 0;
+  border-left: 2rem solid #48556a;
+  border-top: 2rem solid transparent;
+  border-bottom: 2rem solid transparent;
+}
+main .container-right .contain-footer .contain-img-share .state .contain-elements {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem;
+}
+main .container-right .contain-footer .contain-img-share .state .contain-elements p {
+  letter-spacing: 1rem;
+  margin-top: 0.2rem;
+  font-size: 1.6rem;
+  color: #9eafc2;
+}
+main .container-right .contain-footer .contain-img-share .state .contain-elements img {
+  width: 2.3rem;
+  height: 2.3rem;
+}
+main .container-right .contain-footer .contain-img-share .state .btn-close {
+  display: none;
+}
+
+@media screen and (max-width: 60rem) {
+  main {
+    position: relative;
+    grid-template-areas: "img" "text";
+    margin: 5rem auto;
+    width: 90%;
+    min-width: 33rem;
+  }
+  main .container-left {
+    width: 100%;
+  }
+  main .container-left img {
+    border-radius: 1rem 1rem 0 0;
+  }
+  main .container-right {
+    margin: 4rem;
+  }
+  main .container-right h1 {
+    font-size: 2.3rem;
+  }
+  main .container-right .contain-footer .contain-img-share {
+    margin-top: 4.5rem;
+  }
+  main .container-right .contain-footer .contain-img-share .state {
+    background-color: #48556a;
+    margin: 0;
+    width: 100%;
+    height: 10rem;
+    border-radius: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 0rem 0rem 1rem 1rem;
+  }
+  main .container-right .contain-footer .contain-img-share .state::before {
+    display: none;
+    margin: 0;
+    border: none;
+  }
+  main .container-right .contain-footer .contain-img-share .state .contain-elements {
+    height: 80%;
+    width: 65%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem;
+  }
+  main .container-right .contain-footer .contain-img-share .state .contain-elements p {
+    letter-spacing: 1rem;
+    margin-top: 0.2rem;
+    font-size: 1.3rem;
+    color: #9eafc2;
+  }
+  main .container-right .contain-footer .contain-img-share .state .contain-elements img {
+    width: 2.3rem;
+    height: 2.3rem;
+  }
+  main .container-right .contain-footer .contain-img-share .state .btn-close {
+    display: block;
+    position: absolute;
+    top: 3.3rem;
+    right: 4rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.185);
+    padding: 1rem;
+  }
+  main .container-right .contain-footer .contain-img-share .state .btn-close img {
+    width: 100%;
+    filter: brightness(600);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
